@@ -1,0 +1,50 @@
+html {
+    scroll-behavior: smooth !important;
+    font-family: 'Montserrat', sans-serif;
+}
+
+* {
+    outline: none !important;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.btn.focus,
+.btn:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+button:focus {
+    outline: none !important;
+    outline: 0 auto -webkit-focus-ring-color;
+}
+
+.form-control:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+.input-group>.custom-file .custom-file-input:focus~.custom-file-label,
+.input-group>.custom-select:focus,
+.input-group>.form-control:focus {
+    z-index: 0;
+}
+
+.btn-dark:not(:disabled):not(.disabled).active:focus,
+.btn-dark:not(:disabled):not(.disabled):active:focus,
+.show>.btn-dark.dropdown-toggle:focus {
+    box-shadow: 0;
+}
+
+a {
+    @extend %tr03;
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+        @extend %tr03;
+        text-decoration: none;
+        color: inherit;
+    }
+}

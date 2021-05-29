@@ -1,0 +1,823 @@
+.section-main{
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(219,255,232,1) 23%, rgba(181,255,207,1) 37%, rgba(181,255,207,1) 50%, rgba(191,255,213,1) 62%, rgba(191,255,213,1) 75%, rgba(236,255,242,1) 89%, rgba(255,255,255,1) 100%);
+    background-position: center;
+    background-size: cover;
+    height: 80vh;
+    @include mq('desktop', max){
+        height: 45vh;
+    }
+    @include mq('phablet', max){
+        height: 90vh;
+    }
+    
+    
+    .header-nav{
+        background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.25) 100%);
+        backdrop-filter: blur(12px);
+        z-index: 9999;
+        @include mq('phablet', max){
+            display: none;
+        }
+        nav{
+            height: 48px;
+            .nav-item{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .nav-link{
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 24px;
+                    letter-spacing: 0.02em;
+                    color: #343845;
+                    a:hover{
+                        margin-bottom: 5px;
+                        border-bottom: 4px solid #3CCD74;
+                    }
+                }
+                .nav-link a.active{
+                    border-bottom: 4px solid #3CCD74;
+                }
+            }
+        }
+    }
+    .main{
+        padding: 0 78px;
+        @include mq('desktop', max){
+            padding: 0px 40px;
+        }
+        @include mq('phablet', max){
+            padding: 0px;
+        }
+        .main-left{
+                margin-top: 72px;
+                @include mq('phablet', max){
+                    margin-top: 30px;
+                    order: 2;
+                }
+            .main-title{
+                h1{
+                    font-weight: bold;
+                    font-size: 48px;
+                    line-height: 60px;
+                    letter-spacing: 0.02em;
+                    text-transform: uppercase;
+                    color: #343845;
+                    @include mq('phablet', max){
+                        font-size: 32px;
+                        text-align: center;
+                    }
+                }
+                p{
+                    font-weight: 500;
+                    font-size: 20px;
+                    line-height: 28px;
+                    letter-spacing: 0.02em;
+                    color: #343845;
+                    @include mq('phablet', max){
+                        font-size: 18px;
+                        text-align: center;
+                    }
+                }
+            }
+            .main-btn{
+
+                .btn{
+                    background: #58D488;
+                    border-radius: 8px;
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 18px;
+                    color: #FFFFFF;
+                    padding: 19px 49.5px;
+                    @include mq('phablet', max){
+                        justify-content: center;
+                        margin: 0 auto;
+                        display: block;
+                    }
+                }
+            }
+        }
+        .main-right{
+            position: absolute;
+            right: 0;
+            z-index: 1;
+            @include mq('phablet', max){
+                order: 1;
+            }
+            .main-img{
+                img{
+                    width: 100%;
+                    object-fit: contain;
+                    @include mq('desktop', max){
+                        width: 80%;
+                        position: relative;
+                        left: auto;
+                        right: -140px;
+                    }
+                    @include mq('phablet', max){
+                        width: 100%;
+                        position: relative;
+                        left: auto;
+                        right: 0;
+                        top: 70px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.section-about{
+    margin-top: 64px;
+    margin-bottom: 50px;
+    .about-us{
+        .title h2{
+            margin-left: 32px;
+            font-weight: bold;
+            font-size: 36px;
+            line-height: 48px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #343845;
+            @include mq('phablet', max){
+                margin-left: 0;
+                font-size: 27px;
+            }
+            &::after{
+                display: block;
+                position: absolute;
+                content: "";
+                left: 52px;
+                width: 80px;
+                height: 4px;
+                color: #3CCD74, 100%;
+                background-color: #3CCD74;
+                @include mq('phablet', max){
+                    left: 18px;
+                }
+            }
+        }
+    }
+    .about-tab{
+        margin-top: 40px;
+        .nav-tabs{
+            width: 300px;
+            background: #F0FBF4;
+            border-radius: 8px;
+            padding: 24px 0px 24px 40px;
+            @include mq('phablet', max){
+                overflow-x: auto;
+                width: 100%;
+                display: -webkit-inline-box;
+                overflow: scroll;
+                flex-wrap: nowrap;
+                justify-content: left;
+            }
+            .nav-item{
+                .nav-link{
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: #343845;
+                    border: none !important;
+
+                    &.active{
+                        font-weight: 600;
+                        font-size: 16px;
+                        line-height: 24px;
+                        letter-spacing: 0.02em;
+                        text-decoration-line: underline;
+                        color: #2DB05F;
+                        display: flex;
+                        background-color:unset;
+                        border: none !important;
+                        border-color: none;
+                        &::before{
+                            font-family: "Font Awesome 5 Free";
+                            content: "\f04b";
+                            display: flex;
+                            margin-right: 10px;
+                            color: #3CCD74;
+                            content: "\f095";
+                            
+                        }
+                    }
+                }
+                
+            }
+        }
+        .tab-content{
+            .tab-pane.active{
+                background-image: url("../img/bg-2.png");
+                height: 65vh;
+                background-blend-mode: darken;
+                background-position: right;
+                background-repeat: no-repeat;
+                background-size: contain;
+                @include mq('desktop', max){
+                    height: 34vh;
+                    padding-left: 60px;
+                }
+                @include mq('phablet', max){
+                    height: 100vh;
+                    padding-left: 0;
+                }
+                .tab-about{
+                    background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 150%);
+                    height: 100%;
+                    width: 70%;
+                    @include mq('phablet', max){
+                        width: 100%;
+                    }
+                    .tab-title{
+                        h4{
+                            font-weight: bold;
+                            font-size: 28px;
+                            line-height: 38px;
+                            letter-spacing: 0.04em;
+                            color: #2DB05F;
+                            padding-top: 24px;
+                            @include mq('phablet', max){
+                                font-size: 22px;
+                            }
+                        }
+                    }
+                    .tab-text{
+                        p {
+                            font-weight: 500;
+                            font-size: 14px;
+                            line-height: 24px;
+                            letter-spacing: 0.02em;
+                            color: #343845;
+                            margin-bottom: 0;
+                            margin-left: 16px;
+                            &::before{
+                                position: absolute;
+                                content: "";
+                                width: 2px;
+                                height: 305px;
+                                display: flex;
+                                background-color: #DCDDE2;
+                                left: 16px;
+                                @include mq('desktop', max){
+                                    left: 76px;
+                                }
+                                @include mq('phablet', max){
+                                    left: 18px;
+                                    height: 68%;
+                                }
+                            }
+                        }
+                        a{
+                            font-weight: 600;
+                            font-size: 16px;
+                            line-height: 18px;
+                            letter-spacing: 0.02em;
+                            text-decoration-line: underline;
+                            color: #2DB05F;
+                            margin-left: 16px;
+                        }
+
+                    }
+
+                }
+            }
+        }
+    }
+}
+.section-trichology{
+    .trichology{
+        background: #E3F8EB;
+        border-radius: 20px;
+        padding: 48px 40px;
+        .title h2{
+            font-weight: bold;
+            font-size: 36px;
+            line-height: 48px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #343845;
+            @include mq('phablet', max){
+                font-size: 25px;
+            }
+            &::after{
+                display: block;
+                position: absolute;
+                content: "";
+                left: 54px;
+                width: 80px;
+                height: 4px;
+                color: #3CCD74, 100%;
+                background-color: #3CCD74;
+            }
+        }
+        .text-block{
+            align-items: center;
+            display: flex;
+            margin-top: 28px;
+            p{
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 24px;
+                letter-spacing: 0.02em;
+                color: #343845;
+                margin-left: 12px;
+                margin-bottom: 0px;
+            }
+        }
+    }
+}
+
+
+
+.contacting-us{
+    margin-top: 80px;
+    z-index: 9;
+    .title h2{
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 48px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: #343845;
+        margin-left: 32px;
+        @include mq('phablet', max){
+            margin-left: 0;
+            font-size: 27px;
+        }
+        &::after{
+            display: block;
+            position: absolute;
+            content: "";
+            left: 54px;
+            width: 80px;
+            height: 4px;
+            color: #3CCD74, 100%;
+            background-color: #3CCD74;
+            @include mq('phablet', max){
+                left: 18px;
+            }
+        }
+    }
+    .contact-card{
+        margin-top: 30px;
+        margin-bottom: 20px;
+        padding: 30px 40px;
+        z-index: 9;
+        &:hover{
+            background: #F8FBFC;
+            border: 1px solid #C7F1D7;
+            box-sizing: border-box;
+            box-shadow: 4px 4px 16px rgba(75, 209, 126, 0.1);
+            border-radius: 8px;
+            padding: 30px 40px;
+        }
+        .card-text{
+            margin-top: 24px;
+            p{
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 28px;
+                letter-spacing: 0.02em;
+                color: #343845;
+                text-align: left;
+            }
+        }
+
+    }
+    .position-photo{
+        position: absolute;
+        right: 0;
+        z-index: -1;
+        top: 250%;
+        @include mq('desktop', max){
+            top:144%;
+        }
+        @include mq('phablet', max){
+            top: 434%;
+        }
+        img{
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+}
+
+
+.cosmetology{
+    margin-top: 80px;
+    .title h2{
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 48px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: #343845;
+        margin-left: 32px;
+        @include mq('phablet', max){
+            margin-left: 0;
+            font-size: 26px;
+        }
+        &::after{
+            display: block;
+            position: absolute;
+            content: "";
+            left: 54px;
+            width: 80px;
+            height: 4px;
+            color: #3CCD74, 100%;
+            background-color: #3CCD74;
+            @include mq('phablet', max){
+                left:18px;
+            }
+        }
+    }
+    .cosmetology-text{
+        margin-top: 40px;
+        margin-left: 32px;
+        p{  
+            text-align: left;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 32px;
+            letter-spacing: 0.02em;
+            color: #343845;
+        }
+    }
+    .cosmetik-number{
+        margin-top: 40px;
+        display: block;
+        span{
+            font-weight: bold;
+            font-size: 72px;
+            line-height: 72px;
+            letter-spacing: 0.04em;
+            font-feature-settings: 'pnum' on, 'lnum' on;
+            color: #3CCD74;
+            @include mq('phablet', max){
+                font-size: 56px;
+            }
+        }
+        p{
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 32px;
+            letter-spacing: 0.02em;
+            color: #343845;
+        }
+    }
+}
+
+
+.clinic-slider{
+    margin-top: 80px;
+    padding: 80px 60px 60px 60px;
+    background: #E3F8EB;
+    border-radius: 20px;
+    @include mq('phablet', max){
+        padding: 60px 1px 60px 1px;
+    }
+    .title h2{
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 48px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: #343845;
+        @include mq('phablet', max){
+            font-size: 27px;
+        }
+        &::after{
+            display: block;
+            position: absolute;
+            content: "";
+            left: 340px;
+            width: 80px;
+            height: 4px;
+            color: #3CCD74, 100%;
+            background-color: #3CCD74;
+            @include mq('phablet', max){
+                left: 164px;
+            }
+        }
+    }
+    .clinic-icon img{
+        position: absolute;
+        left: 47px;
+        top: 409%;
+        @include mq('desktop', max){
+            top: 231%;
+        }
+        @include mq('phablet', max){
+            top: 769%;
+        }
+        @include mq('phone-wide', max){
+            display: none;
+        }
+    }
+}
+
+.texno-result{
+    margin-top: 80px;
+    padding: 0 32px;
+    @include mq('desktop', max){
+        padding: 0;
+    }
+    .texno-swiper{
+        .swiper-container {
+            width: 480px;
+            height: 546px;
+            padding: 50px;
+            @include mq('phablet', max){
+                padding: 0;
+                width: unset;
+
+            }
+          }
+          .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            width: 300px;
+            height: 300px;
+          }
+          .swiper-slide img {
+            display: block;
+            width: 100%;
+            @include mq('phablet', max){
+                object-fit: contain;
+                width: 100%;
+            }
+          }
+          .swiper-button-next{
+              left: 127px;
+              top:454px;
+              color: #fff;
+              @include mq('phablet', max){
+                left: 75px;
+                top: 408px;
+              }
+          }
+          .swiper-button-prev{
+            left: 67px;
+            top: 454px;
+            right: auto;
+            color: #696874;
+            @include mq('phablet', max){
+                left: 15px;
+                top: 408px;
+              }
+        }
+        .swiper-button-next:after {
+            content: 'next';
+            background: #3CCD74;
+            border-radius: 4px;
+            padding: 10px 20px;
+            font-size: 40px;
+        }
+        .swiper-button-prev:after{
+            content: 'prev';
+            background: #F8FBFC;
+            border-radius: 4px;
+            padding: 10px 20px;
+            font-size: 40px;
+        }
+    }
+
+    .texno-block{
+        margin-top: 24px;
+        @include mq('desktop', max){
+            margin-top: 38px;
+            padding-left: 36px;
+        }
+        @include mq('phablet', max){
+            margin-top: 0;
+            padding-left: 0px;
+        }
+        .title h2{
+            font-weight: bold;
+            font-size: 32px;
+            line-height: 48px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #343845;
+            @include mq('phablet', max){
+                font-size: 25px;
+            }
+            &::after{
+                display: block;
+                position: absolute;
+                content: "";
+                left: 20px;
+                width: 80px;
+                height: 4px;
+                color: #3CCD74, 100%;
+                background-color: #3CCD74;
+                @include mq('desktop', max){
+                    left: 52px;
+                }
+            }
+        }
+        p{
+            margin-top: 30px;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 28px;
+            letter-spacing: 0.02em;
+            color: #343845;
+        }
+        .btn{
+            background: #58D488;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 18px;
+            color: #FFFFFF;
+            padding: 19px 49.5px;
+        }
+
+    }
+
+    
+}
+
+
+
+.contact-me{
+    background: #E3F8EB;
+    border-radius: 20px;
+    padding: 40px;
+    margin-top: 80px;
+    .title h2{
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 48px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: #343845;
+        
+    }
+    .text{
+        margin-bottom: 40px;
+        p{
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 20px;
+            letter-spacing: 0.02em;
+            color: #696874;
+            &::after{
+                display: block;
+                position: absolute;
+                content: "";
+                left: 54px;
+                width: 80px;
+                height: 4px;
+                color: #3CCD74, 100%;
+                background-color: #3CCD74;
+            }
+        }
+    }
+    .form-group{
+        label{
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: 0.02em;
+            color: #696874;
+            margin-bottom: 8px;
+
+        }
+        input{
+            background: #FFFFFF;
+            border: 1px solid #C7F1D7;
+            box-sizing: border-box;
+            border-radius: 8px;
+            height: 56px;
+            padding: 8px 0px 8px 16px;
+            &::placeholder{
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 20px;
+                letter-spacing: 0.02em;
+                color: #C2C2C9;
+            }
+        }
+        .form-select{
+            background: #FFFFFF;
+            border: 1px solid #C7F1D7;
+            box-sizing: border-box;
+            border-radius: 8px;
+            height: 56px;
+            padding: 8px 16px;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            letter-spacing: 0.02em;
+            color: #C2C2C9;
+            width: 100%;
+            option{
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 20px;
+                letter-spacing: 0.02em;
+                color: #C2C2C9;
+            }
+        }
+        .btn{
+            background: #58D488;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 18px;
+            color: #FFFFFF;
+            padding: 19px 63px;
+            width: 100%;
+        }
+        p{
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+            letter-spacing: 0.02em;
+            color: #7C7C87;
+            margin-bottom: 0;
+            margin-top: 10px;
+        }   
+    }
+    .form-img{
+        img{
+            position: absolute;
+            right: 0;
+            top: -240px;
+            @include mq('phablet', max){
+                top:135px;
+            }
+        }
+    }
+}
+.map-sec{
+    margin-top: 160px;
+    background: #E3F8EB;
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 40px;
+    @include mq('phablet', max){
+        margin-top: 396px;
+        margin-bottom: 450px;
+    }
+    .title h2{
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 48px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: #343845;
+        &::after{
+            display: block;
+            position: absolute;
+            content: "";
+            left: 54px;
+            width: 80px;
+            height: 4px;
+            color: #3CCD74, 100%;
+            background-color: #3CCD74;
+        }
+    }
+    .information{
+        margin-bottom: 16px;
+        span{
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: 0.02em;
+            color: #696874;
+            margin-bottom: 8px;
+        }
+        p{
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 24px;
+            letter-spacing: 0.02em;
+            color: #343845;
+        }
+    }
+    .map-google{
+        iframe{
+            position: absolute;
+            right: -37px;
+            top: -180px;
+            filter: drop-shadow(-8px 0px 40px rgba(36, 141, 76, 0.2));
+            border-radius: 20px 0px 0px 20px;
+            @include mq('desktop', max){
+                width: 480px;
+            }
+            @include mq('phablet', max){
+                top: 212px;
+                width: 300px;
+                height: 350px;
+                right: 24px;
+            }
+        }
+    }
+}
+
