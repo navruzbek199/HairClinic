@@ -1,20 +1,6 @@
 .section-main{
-    background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(219,255,232,1) 23%, rgba(181,255,207,1) 37%, rgba(181,255,207,1) 50%, rgba(191,255,213,1) 62%, rgba(191,255,213,1) 75%, rgba(236,255,242,1) 89%, rgba(255,255,255,1) 100%);
-    background-position: center;
-    background-size: cover;
-    height: 80vh;
-    @include mq('desktop', max){
-        height: 45vh;
-    }
-    @include mq('phablet', max){
-        height: 90vh;
-    }
-    
-    
     .header-nav{
-        background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.25) 100%);
-        backdrop-filter: blur(12px);
+        background: linear-gradient(#fff,#e3f8eb);
         z-index: 9999;
         @include mq('phablet', max){
             display: none;
@@ -25,6 +11,7 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                padding-left: 0;
                 .nav-link{
                     font-weight: 500;
                     font-size: 16px;
@@ -32,96 +19,202 @@
                     letter-spacing: 0.02em;
                     color: #343845;
                     a:hover{
+                        transition: none;
                         margin-bottom: 5px;
                         border-bottom: 4px solid #3CCD74;
                     }
+                    
                 }
                 .nav-link a.active{
                     border-bottom: 4px solid #3CCD74;
                 }
+                .nav-lang{
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 24px;
+                    letter-spacing: 0.02em;
+                    color: #343845;
+                    padding: 0 !important;
+                    list-style: none;
+                    margin-bottom: 0;
+                    .lang {
+                        position: relative;
+                        display: inline-block;
+                        cursor: pointer;
+                        z-index: 99;
+                        &::after {
+                          content: "";
+                          width: 100%;
+                          height: 23px;
+                          left: 0;
+                          top: 0;
+                          position: absolute;
+                          z-index: 9999;
+                        }
+                        span {
+                          font-size: 18px;
+                        }
+                        &-list {
+                          position: absolute;
+                          width: 125px;
+                          left: -25px;
+                          top: 100px;
+                          background: #ffffff;
+                          box-shadow: 0px 15px 15px rgba(34, 139, 205, 0.15);
+                          opacity: 0;
+                          visibility: hidden;
+                          transition: 0.2s;
+                          border-radius: 5px;
+                          z-index: 9999;
+                          a {
+                            font-size: 14px;
+                            padding: 9px 25px;
+                            display: block;
+                            max-width: 100%;
+                            color: #000;
+                            &:hover {
+                              color: #000;
+                              background-color: rgba(34, 139, 205, 0.15);
+                            }
+                          }
+                        }
+                        &:hover {
+                          .lang-list {
+                            top: 28px;
+                            opacity: 1;
+                            visibility: visible;
+                          }
+                        }
+                      }
+                }
             }
         }
     }
-    .main{
-        padding: 0 78px;
+    .sec_main{
+        background: #E3F8EB;
+        background-position: center;
+        background-size: cover;
+        height: 75vh;
         @include mq('desktop', max){
-            padding: 0px 40px;
+            height: 45vh;
         }
         @include mq('phablet', max){
-            padding: 0px;
+            height: 100vh;
         }
-        .main-left{
-                margin-top: 72px;
-                @include mq('phablet', max){
-                    margin-top: 30px;
-                    order: 2;
-                }
-            .main-title{
-                h1{
-                    font-weight: bold;
-                    font-size: 48px;
-                    line-height: 60px;
-                    letter-spacing: 0.02em;
-                    text-transform: uppercase;
-                    color: #343845;
-                    @include mq('phablet', max){
-                        font-size: 32px;
-                        text-align: center;
-                    }
-                }
-                p{
-                    font-weight: 500;
-                    font-size: 20px;
-                    line-height: 28px;
-                    letter-spacing: 0.02em;
-                    color: #343845;
-                    @include mq('phablet', max){
-                        font-size: 18px;
-                        text-align: center;
-                    }
-                }
-            }
-            .main-btn{
-
-                .btn{
-                    background: #58D488;
-                    border-radius: 8px;
-                    font-weight: 600;
-                    font-size: 16px;
-                    line-height: 18px;
-                    color: #FFFFFF;
-                    padding: 19px 49.5px;
-                    @include mq('phablet', max){
-                        justify-content: center;
-                        margin: 0 auto;
-                        display: block;
-                    }
-                }
-            }
+        @include mq('phone', max){
+            height: 100vh;
         }
-        .main-right{
-            position: absolute;
-            right: 0;
-            z-index: 1;
+        .main{
+            padding: 0 78px;
+            @include mq('desktop', max){
+                padding: 0px 40px;
+            }
             @include mq('phablet', max){
-                order: 1;
+                padding: 0px;
             }
-            .main-img{
-                img{
+            .main-left{
+                    margin-top: 72px;
+                    @include mq('phablet', max){
+                        margin-top: 30px;
+                        order: 2;
+                    }
+                .main-title{
+                    h1{
+                        font-weight: bold;
+                        font-size: 48px;
+                        line-height: 60px;
+                        letter-spacing: 0.02em;
+                        text-transform: uppercase;
+                        color: #343845;
+                        @include mq('phablet', max){
+                            font-size: 32px;
+                            text-align: left;
+                            padding-top: 72px;
+                        }
+                    }
+                    p{
+                        font-weight: 500;
+                        font-size: 20px;
+                        line-height: 28px;
+                        letter-spacing: 0.02em;
+                        color: #343845;
+                        @include mq('phablet', max){
+                            font-size: 18px;
+                            text-align: left;
+                        }
+                    }
+                }
+                .main-btn{
+                    @include mq('phablet', max){
+                        display: grid;
+                        width: 100%;
+                    }
+                    .btn{
+                        background: #58D488;
+                        border-radius: 8px;
+                        font-weight: 600;
+                        font-size: 16px;
+                        line-height: 18px;
+                        color: #FFFFFF;
+                        padding: 19px 49.5px;
+                        @include mq('phablet', max){
+                            padding: 19px 30.5px;
+                        }
+                    }
+                }
+                .back-col{
+                    position: absolute;
                     width: 100%;
-                    object-fit: contain;
+                    height: 120px;
+                    background: linear-gradient(180deg, rgba(227, 248, 235, 0) 0%, #FFFFFF 100%);
+                    z-index: 9999;
+                    top: 550px;
+                    right: 0;
+                    left: 0;
                     @include mq('desktop', max){
-                        width: 80%;
-                        position: relative;
-                        left: auto;
-                        right: -140px;
+                        top: 568px;
                     }
                     @include mq('phablet', max){
+                        top: 647px;
+                    }
+                    @include mq('phone', max){
+                        top: 609px;
+                    }
+                }
+            }
+            .main-right{
+                position: absolute;
+                right: 0;
+                z-index: 1;
+                @include mq('phablet', max){
+                    order: 1;
+                }
+                .main-img{
+                    img{
                         width: 100%;
-                        position: relative;
-                        left: auto;
-                        right: 0;
-                        top: 70px;
+                        object-fit: contain;
+                        z-index: 1;
+                        @include mq('desktop', max){
+                            width: 80%;
+                            position: relative;
+                            left: auto;
+                            right: -163px;
+                            top: 115px;
+                        }
+                        @include mq('phablet', max){
+                            width: 100%;
+                            position: relative;
+                            left: auto;
+                            right: 0;
+                            top: 70px;
+                        }
+                        @include mq('phone', max){
+                            width: 100%;
+                            position: relative;
+                            left: auto;
+                            right: 0;
+                            top: 38px;
+                        }
                     }
                 }
             }
@@ -145,6 +238,10 @@
                 margin-left: 0;
                 font-size: 27px;
             }
+            @include mq('phone', max){
+                padding-top: 0px;
+            }
+            
             &::after{
                 display: block;
                 position: absolute;
@@ -162,6 +259,7 @@
     }
     .about-tab{
         margin-top: 40px;
+        
         .nav-tabs{
             width: 300px;
             background: #F0FBF4;
@@ -174,15 +272,22 @@
                 overflow: scroll;
                 flex-wrap: nowrap;
                 justify-content: left;
+                padding: 24px 0 24px 10px;
             }
             .nav-item{
+                display: flex;
+                align-items: center;
                 .nav-link{
                     font-weight: 600;
                     font-size: 16px;
                     line-height: 24px;
                     color: #343845;
                     border: none !important;
-
+                    display: flex;
+                    align-items: center;
+                    img{
+                        display: none;
+                    }
                     &.active{
                         font-weight: 600;
                         font-size: 16px;
@@ -194,16 +299,25 @@
                         background-color:unset;
                         border: none !important;
                         border-color: none;
-                        &::before{
-                            font-family: "Font Awesome 5 Free";
-                            content: "\f04b";
+                        align-items: center;
+                        img{
                             display: flex;
                             margin-right: 10px;
-                            color: #3CCD74;
-                            content: "\f095";
-                            
+                            @include mq('phablet', max){
+                                transform: rotate(90deg);
+                            }
                         }
+                        // &::before{
+                        //     font-family: "Font Awesome 5 Free";
+                        //     content: "\f04b";
+                        //     display: flex;
+                        //     margin-right: 10px;
+                        //     color: #3CCD74;
+                        //     content: "\f095";
+                            
+                        // }
                     }
+                    
                 }
                 
             }
@@ -223,6 +337,7 @@
                 @include mq('phablet', max){
                     height: 100vh;
                     padding-left: 0;
+                    background-position: bottom;
                 }
                 .tab-about{
                     background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 150%);
@@ -292,6 +407,12 @@
         background: #E3F8EB;
         border-radius: 20px;
         padding: 48px 40px;
+        @include mq('phablet', max){
+            padding: 32px 25px;
+        }
+        @include mq('phone', max){
+            padding: 16px;
+        }
         .title h2{
             font-weight: bold;
             font-size: 36px;
@@ -366,6 +487,12 @@
         margin-bottom: 20px;
         padding: 30px 40px;
         z-index: 9;
+        @include mq('phablet', max){
+            padding: 0px;
+        }
+        @include mq('phone', max){
+            padding: 0px;
+        }
         &:hover{
             background: #F8FBFC;
             border: 1px solid #C7F1D7;
@@ -373,6 +500,20 @@
             box-shadow: 4px 4px 16px rgba(75, 209, 126, 0.1);
             border-radius: 8px;
             padding: 30px 40px;
+            @include mq('phablet', max){
+                padding: 0;
+                background-color: unset;
+                border: none;
+                box-shadow: none;
+                border-radius: unset;
+            }
+            @include mq('phone', max){
+                padding: 0;
+                background-color: unset;
+                border: none;
+                box-shadow: none;
+                border-radius: unset;
+            }
         }
         .card-text{
             margin-top: 24px;
@@ -418,7 +559,7 @@
         margin-left: 32px;
         @include mq('phablet', max){
             margin-left: 0;
-            font-size: 26px;
+            font-size: 20px;
         }
         &::after{
             display: block;
@@ -437,6 +578,18 @@
     .cosmetology-text{
         margin-top: 40px;
         margin-left: 32px;
+        @include mq('phablet', max){
+            margin-left: 0;
+            br{
+                display: none;
+            }
+        }
+        @include mq('phone', max){
+            margin-left: 0;
+            br{
+                display: none;
+            }
+        }
         p{  
             text-align: left;
             font-weight: 500;
@@ -444,6 +597,11 @@
             line-height: 32px;
             letter-spacing: 0.02em;
             color: #343845;
+            br{
+                @include mq('phone', max){
+                    display: none;
+                }
+            }
         }
     }
     .cosmetik-number{
@@ -457,7 +615,7 @@
             font-feature-settings: 'pnum' on, 'lnum' on;
             color: #3CCD74;
             @include mq('phablet', max){
-                font-size: 56px;
+                font-size: 42px;
             }
         }
         p{
@@ -487,7 +645,10 @@
         text-transform: uppercase;
         color: #343845;
         @include mq('phablet', max){
-            font-size: 27px;
+            font-size: 25px;
+            text-align: left;
+            padding-left: 12px;
+
         }
         &::after{
             display: block;
@@ -499,7 +660,10 @@
             color: #3CCD74, 100%;
             background-color: #3CCD74;
             @include mq('phablet', max){
-                left: 164px;
+                left: 30px;
+            }
+            @include mq('phone', max){
+                left: 30px;
             }
         }
     }
@@ -525,6 +689,11 @@
     @include mq('desktop', max){
         padding: 0;
     }
+    .col-lg-5{
+        @include mq('phablet', max){
+            order: 2;
+        }
+    }
     .texno-swiper{
         .swiper-container {
             width: 480px;
@@ -548,6 +717,7 @@
             @include mq('phablet', max){
                 object-fit: contain;
                 width: 100%;
+                border-radius: 7px;
             }
           }
           .swiper-button-next{
@@ -558,6 +728,9 @@
                 left: 75px;
                 top: 408px;
               }
+              @include mq('phone', max){
+                top: 364px;
+              }
           }
           .swiper-button-prev{
             left: 67px;
@@ -567,6 +740,9 @@
             @include mq('phablet', max){
                 left: 15px;
                 top: 408px;
+              }
+              @include mq('phone', max){
+                top: 364px;
               }
         }
         .swiper-button-next:after {
@@ -617,6 +793,12 @@
                 @include mq('desktop', max){
                     left: 52px;
                 }
+                @include mq('phablet', max){
+                    left: 17px;
+                }
+                @include mq('phone', max){
+                    left: 18px;
+                }
             }
         }
         p{
@@ -635,6 +817,10 @@
             line-height: 18px;
             color: #FFFFFF;
             padding: 19px 49.5px;
+            @include mq('phablet', max){
+                width: 100%;
+                padding: 19px 24.5px;
+            }
         }
 
     }
@@ -649,6 +835,16 @@
     border-radius: 20px;
     padding: 40px;
     margin-top: 80px;
+    @include mq('phablet', max){
+        padding: 21px;
+    }
+    @include mq('phone', max){
+        margin-top: 0;
+        padding: 20px;
+        br{
+            display: none;
+        }
+    }
     .title h2{
         font-weight: bold;
         font-size: 32px;
@@ -656,7 +852,12 @@
         letter-spacing: 0.04em;
         text-transform: uppercase;
         color: #343845;
-        
+        @include mq('phablet', max){
+            font-size: 25px;
+        }
+        @include mq('phone', max){
+            font-size: 24px;
+        }
     }
     .text{
         margin-bottom: 40px;
@@ -675,6 +876,12 @@
                 height: 4px;
                 color: #3CCD74, 100%;
                 background-color: #3CCD74;
+                @include mq('phablet', max){
+                    left: 39px;
+                }
+                @include mq('phone', max){
+                    left: 37px;
+                }
             }
         }
     }
@@ -733,6 +940,10 @@
             color: #FFFFFF;
             padding: 19px 63px;
             width: 100%;
+            @include mq('phone', max){
+                padding: 19px 60px;
+                margin-top: 10px;
+            }
         }
         p{
             font-weight: 500;
@@ -751,6 +962,12 @@
             top: -240px;
             @include mq('phablet', max){
                 top:135px;
+                display: none;
+            }
+            @include mq('phone', max){
+                top: 178px;
+                left: -30px;
+                display: none;
             }
         }
     }
@@ -762,8 +979,9 @@
     padding: 40px;
     margin-bottom: 40px;
     @include mq('phablet', max){
-        margin-top: 396px;
+        margin-top: 44px;
         margin-bottom: 450px;
+        padding: 24px;
     }
     .title h2{
         font-weight: bold;
@@ -772,6 +990,12 @@
         letter-spacing: 0.04em;
         text-transform: uppercase;
         color: #343845;
+        @include mq('phablet', max){
+            font-size: 24px;
+        }
+        @include mq('phone', max){
+            font-size: 24px;
+        }
         &::after{
             display: block;
             position: absolute;
@@ -785,6 +1009,7 @@
     }
     .information{
         margin-bottom: 16px;
+        margin-top: 16px;
         span{
             font-weight: 500;
             font-size: 14px;
@@ -806,6 +1031,7 @@
             position: absolute;
             right: -37px;
             top: -180px;
+
             filter: drop-shadow(-8px 0px 40px rgba(36, 141, 76, 0.2));
             border-radius: 20px 0px 0px 20px;
             @include mq('desktop', max){
@@ -815,7 +1041,12 @@
                 top: 212px;
                 width: 300px;
                 height: 350px;
-                right: 24px;
+                right: 37px;
+                border-radius: 20px;
+            }
+            @include mq('phone', max){
+                top: 235px;
+                right: 0px;
             }
         }
     }

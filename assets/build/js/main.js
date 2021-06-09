@@ -18083,7 +18083,7 @@ function animateNumber(callback, from, to, duration) {
   
   animateNumber(value => {
     document.querySelector('.count1').textContent = Math.floor(value);
-  }, 0, 97, 5000);
+  }, 0, 97, 15000);
 
 
   function animateNumber(callback, from, to, duration) {
@@ -18101,7 +18101,7 @@ function animateNumber(callback, from, to, duration) {
   
   animateNumber(value => {
     document.querySelector('.count2').textContent = Math.floor(value);
-  }, 0, 10, 5000);
+  }, 0, 10, 15000);
 
 
 
@@ -18120,7 +18120,7 @@ function animateNumber(callback, from, to, duration) {
   
   animateNumber(value => {
     document.querySelector('.count3').textContent = Math.floor(value);
-  }, 0, 80, 5000);
+  }, 0, 80, 15000);
 
 
 
@@ -18139,26 +18139,48 @@ function animateNumber(callback, from, to, duration) {
   
   animateNumber(value => {
     document.querySelector('.count4').textContent = Math.floor(value);
-  }, 0, 20, 5000);
+  }, 0, 20, 15000);
 
 
 
 
 
   var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 4,
+    slidesPerView: 2,
     spaceBetween: 10,
     slidesPerGroup: 2,
     loop: true,
+    speed: 300,
     loopFillGroupWithBlank: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+    pagination: {
+        el: '.swiper-pagination',
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 15,
+      },
+      375: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      640: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 50,
+      },
+      1024: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
+    }
   });
 
 
@@ -18195,3 +18217,38 @@ function animateNumber(callback, from, to, duration) {
 
   
 new WOW().init();
+
+
+
+
+$('#closemodal').click(function() {
+  $('#myModal').modal('hide');
+});
+
+
+// $(document).ready(function () {
+//   $('img').on('click', function () {
+//       var image = $(this).attr('src');
+//       $('#myModal1').on('show.bs.modal', function () {
+//           $(".img-responsive").attr("src", image);
+//       });
+//   });
+// });
+
+
+
+
+$.mask.definitions['9'] = '';
+$.mask.definitions['n'] = '[0-9]';
+$(function(){
+  $(".phone-input").mask("+998 nn nnn nn nn");
+  // $("#phone-input2").mask("+998 nn nnn nn nn");
+  // $("#phone-input3").mask("XXXX XXXX XXnn nnnn");
+  // $("#phone-input4").mask("nn/nn");
+  // $("#phone-input5").mask("nnnn");
+});
+
+
+$('#closeBtn').click(function() {
+  $('#myModal').modal('hide');
+});

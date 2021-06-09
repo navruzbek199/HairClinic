@@ -38,6 +38,10 @@ const path = {
         fonts: 'assets/src/fonts/**/*.*',
         libs: 'assets/src/libs/**/*.*'
     },
+    scripts: {
+        src: './',
+        dest: './build/'
+      },
     clean: './assets/build/*'
 };
 
@@ -65,8 +69,23 @@ const gulp = require('gulp'),  // подключаем Gulp
     pngquant = require('imagemin-pngquant'), // плагин для сжатия png
     rimraf = require('gulp-rimraf'), // плагин для удаления файлов и каталогов
     rename = require('gulp-rename');
+    fileinclude = require('gulp-file-include');
 
-/* задачи */
+
+    gulp.task('fileinclude', function() {
+      gulp.src(['**/*.html'])
+        .pipe(fileinclude())
+        .pipe(gulp.dest('./'));
+    });
+
+
+
+
+
+
+
+
+
 
 // запуск сервера
 gulp.task('webserver', function () {

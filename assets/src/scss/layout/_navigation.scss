@@ -2,7 +2,7 @@
     .swiper-container {
         width: 100%;
         height: 100%;
-        padding: 35px 0;
+        padding: 35px 0px;
       }
     
       .swiper-slide {
@@ -23,12 +23,28 @@
         min-height: 274px !important;
         padding: 24px;
         margin-top: 25px;
-        margin-right: 40px !important;
+        margin-right: 12px !important;
         @include mq('phablet', max){
-            min-width: 300px!important;
+            min-width: 280px!important;
+            margin-right: 20px !important;
+            margin-bottom: 42px;
         }
+        @include mq('phone', max){
+            overflow: auto;
+            display: block;
+        }
+
         .slider-img{
             margin-right: 12px;
+            border-radius: 50%;
+            object-fit: contain;
+        }
+        .slider-about{
+            @include mq('phablet', max){
+                width: 100%;
+                height: auto;
+                overflow: auto;
+            }
         }
         .slider-title{
             h6{
@@ -36,6 +52,9 @@
                 line-height: 28px;
                 letter-spacing: 0.04em;
                 color: #343845;
+                @include mq('phone', max){
+                    font-size: 21px;
+                }
             }
         }
         .slider-text{
@@ -79,21 +98,52 @@
         font-weight: bold;
     }
     .swiper-button-next {
-        right: 10px;
+        right: 0px;
         left: auto;
         background: #3ccd74;
         padding: 20px;
         border-radius: 50%;
+        @include mq('phablet', max){
+            right: 72px;
+            left: auto;
+            background: #3ccd74;
+            padding: 23px;
+            border-radius: 50%;
+            top: 432px;
+            z-index: 99;
+        }
+        @include mq('phone', max){
+            right: 72px;
+            left: auto;
+            background: #3ccd74;
+            padding: 23px;
+            border-radius: 50%;
+            top: 476px;
+            z-index: 99;
+        }
     }
     .swiper-button-prev{
-        left: 10px;
+        left: 0px;
         right: auto;
         background: #3ccd74;
         padding: 20px;
         border-radius: 50%;
-    }
-    .swiper-pagination-bullet-active {
-        background:#fff;
+        @include mq('phablet', max){
+            left: 72px;
+            right: auto;
+            background: #3ccd74;
+            padding: 23px;
+            border-radius: 50%;
+            top: 432px;
+        }
+        @include mq('phone', max){
+            left: 72px;
+            right: auto;
+            background: #3ccd74;
+            padding: 23px;
+            border-radius: 50%;
+            top: 476px;
+        }
     }
     .swiper-pagination-bullet {
         width: 8px;
@@ -101,6 +151,34 @@
         display: inline-block;
         border-radius: 50%;
         background:#3ccd74;
-        opacity: .5;
+        opacity: 1;
+        
+    }
+
+}
+
+.swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    border-radius: 50%;
+    background:#3ccd74;
+    opacity: 1;
+}
+.swiper-pagination-bullet-active{
+    background-color: #fff !important;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: 14px;
+    left: 0;
+    width: 100%;
+}
+
+
+.texno-swiper{
+    @include mq('phablet', max){
+        order: 2;
+        margin-top: 30px;
     }
 }

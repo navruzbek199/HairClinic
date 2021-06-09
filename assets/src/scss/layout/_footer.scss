@@ -11,6 +11,9 @@
     .brand{
         display: block;
         flex-direction: column;
+        @include mq('phablet', max){
+            text-align: center;
+        }
         img{
             object-fit: contain;
             }
