@@ -157,13 +157,24 @@
 
 }
 
+
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: 14px;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    @include mq('phablet', max){
+        opacity: 1;
+    }
+}
+
 .swiper-pagination-bullet {
     width: 8px;
     height: 8px;
     display: inline-block;
     border-radius: 50%;
     background:#3ccd74;
-    opacity: 1;
+    
 }
 .swiper-pagination-bullet-active{
     background-color: #fff !important;

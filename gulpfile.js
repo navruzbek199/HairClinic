@@ -69,14 +69,9 @@ const gulp = require('gulp'),  // подключаем Gulp
     pngquant = require('imagemin-pngquant'), // плагин для сжатия png
     rimraf = require('gulp-rimraf'), // плагин для удаления файлов и каталогов
     rename = require('gulp-rename');
-    fileinclude = require('gulp-file-include');
 
 
-    gulp.task('fileinclude', function() {
-      gulp.src(['**/*.html'])
-        .pipe(fileinclude())
-        .pipe(gulp.dest('./'));
-    });
+    
 
 
 

@@ -96,7 +96,7 @@
         background-size: cover;
         height: 75vh;
         @include mq('desktop', max){
-            height: 45vh;
+            height: 40vh;
         }
         @include mq('phablet', max){
             height: 100vh;
@@ -432,6 +432,12 @@
                 height: 4px;
                 color: #3CCD74, 100%;
                 background-color: #3CCD74;
+                @include mq('phablet', max){
+                    left: 42px;
+                }
+                @include mq('phone', max){
+                    left: 35px;
+                }
             }
         }
         .text-block{
@@ -867,22 +873,6 @@
             line-height: 20px;
             letter-spacing: 0.02em;
             color: #696874;
-            &::after{
-                display: block;
-                position: absolute;
-                content: "";
-                left: 54px;
-                width: 80px;
-                height: 4px;
-                color: #3CCD74, 100%;
-                background-color: #3CCD74;
-                @include mq('phablet', max){
-                    left: 39px;
-                }
-                @include mq('phone', max){
-                    left: 37px;
-                }
-            }
         }
     }
     .form-group{
@@ -1005,6 +995,12 @@
             height: 4px;
             color: #3CCD74, 100%;
             background-color: #3CCD74;
+            @include mq('phablet', max){
+                left: 42px;
+            }
+            @include mq('phone', max){
+                left: 35px;
+            }
         }
     }
     .information{

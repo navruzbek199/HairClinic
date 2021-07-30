@@ -287,3 +287,104 @@ $(function(){
 $('#closeBtn').click(function() {
   $('#myModal').modal('hide');
 });
+
+
+var swiper = new Swiper(".mySwiper2", {
+  slidesPerView: 2,
+  spaceBetween: 30,
+  slidesPerGroup: 3,
+  loop: true,
+  loopFillGroupWithBlank: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 50,
+    },
+    375: {
+      slidesPerView: 1,
+      spaceBetween: 50,
+    },
+    640: {
+      slidesPerView: 1,
+      spaceBetween: 50,
+    },
+    768: {
+      slidesPerView: 1,
+      spaceBetween: 50,
+    },
+    1024: {
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+  }
+});
+
+
+
+
+
+var swiper = new Swiper(".mySwiper4", {
+  loop: true,
+  spaceBetween: 10,
+  slidesPerView: 4,
+  freeMode: true,
+  watchSlidesVisibility: true,
+  watchSlidesProgress: true,
+});
+var swiper2 = new Swiper(".mySwiper3", {
+  loop: true,
+  spaceBetween: 10,
+  navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+  },
+  thumbs: {
+      swiper: swiper,
+  },
+});
+
+
+
+
+var swiper = new Swiper(".mySwiper5", {
+  cssMode: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+  },
+  mousewheel: true,
+  keyboard: true,
+});
+
+
+
+
+
+var swiper = new Swiper(".mySwiper6", {
+  effect: "coverflow",
+  grabCursor: true,
+  slidesPerView: 1,
+  centeredSlides: 1,
+  slidesPerView: "auto",
+  coverflowEffect: {
+    rotate: 50,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: true,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+  },
+});
