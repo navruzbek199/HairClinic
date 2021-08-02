@@ -26795,6 +26795,12 @@ a:hover {
   color: inherit;
 }
 
+.breadcrumb {
+  background: transparent !important;
+  margin: 0;
+  margin-top: 30px;
+}
+
 /* Fonts */
 @font-face {
   font-family: "montserrat";
@@ -28457,6 +28463,12 @@ header .header-item .header-contact .header-btn .btn {
   }
 }
 
+.clinic-slider .title h2.center::after {
+  left: 50% !important;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
 .clinic-slider .clinic-icon img {
   position: absolute;
   left: 47px;
@@ -28981,7 +28993,7 @@ header .header-item .header-contact .header-btn .btn {
 
 .footer {
   background: #F8FBFC;
-  margin-top: 140px;
+  margin-top: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -29162,21 +29174,17 @@ header .header-item .header-contact .header-btn .btn {
 
 .my_servis {
   background-image: url("../img/servis-bg.png");
-  height: 75vh;
+  height: auto;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  margin-top: 40px;
   background-position: center center;
   background-repeat: no-repeat;
   max-width: 100%;
 }
 
-@media only screen and (max-width: 1247px) {
-  .my_servis {
-    height: 39vh;
-  }
-}
-
 @media only screen and (max-width: 559px) {
   .my_servis {
-    height: 131vh;
     margin-top: 30px;
     background: #e3f8eb;
     background-image: none !important;
@@ -29185,7 +29193,6 @@ header .header-item .header-contact .header-btn .btn {
 
 @media only screen and (max-width: 399px) {
   .my_servis {
-    height: 144vh;
     margin-top: 30px;
     background: #e3f8eb;
     background-image: none !important;
@@ -29304,27 +29311,7 @@ header .header-item .header-contact .header-btn .btn {
 }
 
 .my_servis .pos-img {
-  position: absolute;
-  z-index: 9;
-  background-position: center;
-  width: 100%;
-  height: 120px;
-  left: 0;
-  top: 540px;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(227, 248, 235, 0)), to(#ffffff));
-  background: linear-gradient(180deg, rgba(227, 248, 235, 0) 0%, #ffffff 100%);
-}
-
-@media only screen and (max-width: 559px) {
-  .my_servis .pos-img {
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 399px) {
-  .my_servis .pos-img {
-    display: none;
-  }
+  display: none;
 }
 
 @media only screen and (max-width: 559px) {
@@ -29733,28 +29720,28 @@ header .header-item .header-contact .header-btn .btn {
 }
 
 .servies-two {
-  height: 85vh;
-  background-position: center center;
-  background-repeat: no-repeat;
+  background-position: right center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
   max-width: 100%;
+  padding-bottom: 100px;
 }
 
-@media only screen and (max-width: 1247px) {
+@media only screen and (max-width: 767px) {
   .servies-two {
-    height: 45vh;
+    background: transparent !important;
+    padding-bottom: 0;
   }
 }
 
 @media only screen and (max-width: 559px) {
   .servies-two {
-    height: 75vh;
     margin-top: 30px;
   }
 }
 
 @media only screen and (max-width: 399px) {
   .servies-two {
-    height: 80vh;
     margin-top: 30px;
   }
 }
@@ -29842,35 +29829,16 @@ header .header-item .header-contact .header-btn .btn {
 }
 
 .galery-page {
+  position: relative;
   background: #e3f8eb;
-  height: 85vh;
-}
-
-@media only screen and (max-width: 1247px) {
-  .galery-page {
-    height: 45vh;
-  }
-}
-
-@media only screen and (max-width: 559px) {
-  .galery-page {
-    height: 100vh;
-    margin-top: 30px;
-  }
-}
-
-@media only screen and (max-width: 399px) {
-  .galery-page {
-    height: 110vh;
-    margin-top: 30px;
-  }
+  height: auto;
 }
 
 .galery-page .back-galery {
   position: absolute;
-  height: 120px;
+  height: 60px;
   left: 0px;
-  top: 620px;
+  bottom: 0;
   width: 100%;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(227, 248, 235, 0)), to(#ffffff));
   background: linear-gradient(180deg, rgba(227, 248, 235, 0) 0%, #ffffff 100%);
@@ -29911,6 +29879,7 @@ header .header-item .header-contact .header-btn .btn {
 
 .galery-page .galery-page_title p {
   margin-top: 30px;
+  margin-bottom: 60px;
   font-weight: 500;
   font-size: 14px;
   line-height: 24px;
@@ -29923,7 +29892,6 @@ header .header-item .header-contact .header-btn .btn {
   height: 300px;
   margin-left: auto;
   margin-right: auto;
-  top: -250px;
 }
 
 .galey-slider .swiper-slide {
@@ -30500,7 +30468,7 @@ header .header-item .header-contact .header-btn .btn {
 
 .galery-two-page {
   background: #e3f8eb;
-  height: 85vh;
+  height: auto !important;
   padding: 20px;
 }
 
@@ -30512,14 +30480,12 @@ header .header-item .header-contact .header-btn .btn {
 
 @media only screen and (max-width: 559px) {
   .galery-two-page {
-    height: 105vh;
     margin-top: 30px;
   }
 }
 
 @media only screen and (max-width: 399px) {
   .galery-two-page {
-    height: 106vh;
     margin-top: 30px;
   }
 }
@@ -30855,8 +30821,21 @@ header .header-item .header-contact .header-btn .btn {
 
 .other-servis .our-box {
   max-width: 100%;
-  max-height: 320px;
+  height: 100%;
   border-radius: 10px;
+  background-color: #c7f1d7;
+}
+
+.other-servis .our-box h3,
+.other-servis .our-box h4,
+.other-servis .our-box h5,
+.other-servis .our-box h6 {
+  word-break: break-all;
+  -webkit-line-clamp: 3;
+  height: auto;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .other-servis .our-box .boxing-img img {
@@ -30867,8 +30846,7 @@ header .header-item .header-contact .header-btn .btn {
 }
 
 .other-servis .our-box .our-box_card {
-  padding: 10px;
-  background-color: #c7f1d7;
+  padding: 15px;
   border-radius: 0px 0px 10px 10px;
 }
 

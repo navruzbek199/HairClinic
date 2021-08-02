@@ -1,20 +1,18 @@
 .my_servis {
   background-image: url("../img/servis-bg.png");
-  height: 75vh;
+  height: auto;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  margin-top: 40px;
   background-position: center center;
   background-repeat: no-repeat;
   max-width: 100%;
-  @include mq("desktop", max) {
-    height: 39vh;
-  }
   @include mq("phablet", max) {
-    height: 131vh;
     margin-top: 30px;
     background: #e3f8eb;
     background-image: none !important;
   }
   @include mq("phone", max) {
-    height: 144vh;
     margin-top: 30px;
     background: #e3f8eb;
     background-image: none !important;
@@ -107,34 +105,8 @@
     }
   }
   .pos-img {
-    position: absolute;
-    z-index: 9;
-    background-position: center;
-    width: 100%;
-    height: 120px;
-    left: 0;
-    top: 540px;
-    background: linear-gradient(
-      180deg,
-      rgba(227, 248, 235, 0) 0%,
-      #ffffff 100%
-    );
-    @include mq("phablet", max) {
-      // top: 600px;
-      // background: #E3F8EB;
-      // z-index: 1;
-      // height: 500px;
+    display: none;
 
-      display: none;
-    }
-    @include mq("phone", max) {
-      // top: 600px;
-      // background: #E3F8EB;
-      // z-index: 1;
-      // height: 500px;
-
-      display: none;
-    }
   }
 }
 .first-sec {
@@ -486,19 +458,20 @@
 
 .servies-two {
   // background: url("../img/servies2-bg.png");
-  height: 85vh;
-  background-position: center center;
-  background-repeat: no-repeat;
+  background-position: right center!important;
+  background-size: cover!important;
+  background-repeat: no-repeat!important;
   max-width: 100%;
-  @include mq("desktop", max) {
-    height: 45vh;
+  padding-bottom: 100px;
+  @include mq('tablet', max)
+  {
+    background: transparent!important;
+    padding-bottom: 0;
   }
   @include mq("phablet", max) {
-    height: 75vh;
     margin-top: 30px;
   }
   @include mq("phone", max) {
-    height: 80vh;
     margin-top: 30px;
   }
 
@@ -579,24 +552,18 @@
 }
 
 .galery-page {
+  position: relative;
   background: #e3f8eb;
-  height: 85vh;
-  @include mq("desktop", max) {
-    height: 45vh;
+  height: auto;
+  .row
+  {
   }
-  @include mq("phablet", max) {
-    height: 100vh;
-    margin-top: 30px;
-  }
-  @include mq("phone", max) {
-    height: 110vh;
-    margin-top: 30px;
-  }
+
   .back-galery {
     position: absolute;
-    height: 120px;
+    height: 60px;
     left: 0px;
-    top: 620px;
+    bottom: 0;
     width: 100%;
     background: linear-gradient(
       180deg,
@@ -632,6 +599,7 @@
     }
     p {
       margin-top: 30px;
+      margin-bottom: 60px;
       font-weight: 500;
       font-size: 14px;
       line-height: 24px;
@@ -646,7 +614,6 @@
     height: 300px;
     margin-left: auto;
     margin-right: auto;
-    top: -250px;
   }
 
   .swiper-slide {
@@ -663,7 +630,7 @@
   .mySwiper4 {
     width: 100%;
     height: 137px;
-    box-sizing: border-box;
+    box-sizing: border-box;  
     padding: 10px 0;
   }
 
@@ -1078,19 +1045,18 @@
 
 
 
-.galery-two-page{
+.galery-two-page
+{
   background: #e3f8eb;
-  height: 85vh;
+  height: auto!important;
   padding: 20px;
   @include mq("desktop", max) {
     height: 45vh;
   }
   @include mq("phablet", max) {
-    height: 105vh;
     margin-top: 30px;
   }
   @include mq("phone", max) {
-    height: 106vh;
     margin-top: 30px;
   }
   .title{
@@ -1371,19 +1337,25 @@
       top: 38%;
     }
   }
-
 }
-
-
-
-
 
 
 .other-servis{
   .our-box{
     max-width: 100%;
-    max-height: 320px;
+    height: 100%;
     border-radius: 10px;
+    background-color: #c7f1d7;
+
+    h3,
+    h4,
+    h5,
+    h6
+    {
+      word-break: break-all;
+      @include text-clamp(3);
+    }
+
     .boxing-img{
       img{
         width: 100%;
@@ -1392,8 +1364,7 @@
       }
     }
     .our-box_card{
-      padding: 10px;
-      background-color: #c7f1d7;
+      padding: 15px;
       border-radius: 0px 0px 10px 10px;
     }
   }

@@ -672,7 +672,17 @@
                 left: 30px;
             }
         }
+
+        &.center
+        {
+            &::after
+            {
+                left: 50%!important;
+                transform: translateX(-50%);
+            }
+        }
     }
+
     .clinic-icon img{
         position: absolute;
         left: 47px;
