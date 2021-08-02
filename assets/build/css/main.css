@@ -29172,6 +29172,16 @@ header .header-item .header-contact .header-btn .btn {
   }
 }
 
+.btn {
+  background: #58D488;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 18px;
+  color: #FFFFFF;
+  padding: 13px 38px;
+}
+
 .my_servis {
   background-image: url("../img/servis-bg.png");
   height: auto;
@@ -29375,28 +29385,22 @@ header .header-item .header-contact .header-btn .btn {
 }
 
 .about-page {
-  height: 85vh;
-  background-position: center center;
-  background-repeat: no-repeat;
+  height: auto;
+  background-position: right top !important;
+  background-repeat: no-repeat !important;
   max-width: 100%;
-}
-
-@media only screen and (max-width: 1247px) {
-  .about-page {
-    height: 39vh;
-  }
+  padding-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 @media only screen and (max-width: 559px) {
   .about-page {
-    height: 100vh;
     margin-top: 30px;
   }
 }
 
 @media only screen and (max-width: 399px) {
   .about-page {
-    height: 100vh;
     margin-top: 30px;
   }
 }
@@ -30114,20 +30118,19 @@ header .header-item .header-contact .header-btn .btn {
 
 .contact-page {
   background: #e3f8eb;
-  height: 75vh;
   padding-top: 20px;
+  padding-bottom: 20px;
+  height: auto;
 }
 
 @media only screen and (max-width: 1247px) {
   .contact-page {
-    height: 40vh;
     padding-top: 1px;
   }
 }
 
 @media only screen and (max-width: 559px) {
   .contact-page {
-    height: 100vh;
     margin-top: 30px;
     padding-top: 70px;
   }
@@ -30135,7 +30138,6 @@ header .header-item .header-contact .header-btn .btn {
 
 @media only screen and (max-width: 399px) {
   .contact-page {
-    height: 106vh;
     margin-top: 30px;
   }
 }
