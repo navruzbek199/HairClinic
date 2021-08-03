@@ -18340,7 +18340,7 @@ var swiper = new Swiper(".mySwiper6", {
 });
 
 $('.mySwiper6 a').on('click', function() {
-  $(this).toggleClass('active');
+  $('.mySwiper6 .swiper-wrapper').toggleClass('active');
   setTimeout(() => {
     $('body').toggleClass('active');
   }, 300);
