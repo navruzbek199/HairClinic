@@ -28424,12 +28424,14 @@ header .header-item .header-contact .header-btn .btn {
 }
 
 .clinic-slider .title h2 {
+  position: relative;
   font-weight: bold;
   font-size: 36px;
   line-height: 48px;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: #343845;
+  z-index: 1;
 }
 
 @media only screen and (max-width: 559px) {
@@ -28472,19 +28474,7 @@ header .header-item .header-contact .header-btn .btn {
 .clinic-slider .clinic-icon img {
   position: absolute;
   left: 47px;
-  top: 409%;
-}
-
-@media only screen and (max-width: 1247px) {
-  .clinic-slider .clinic-icon img {
-    top: 231%;
-  }
-}
-
-@media only screen and (max-width: 559px) {
-  .clinic-slider .clinic-icon img {
-    top: 769%;
-  }
+  top: 50px;
 }
 
 @media only screen and (max-width: 479px) {
@@ -29182,20 +29172,25 @@ header .header-item .header-contact .header-btn .btn {
   padding: 13px 38px;
 }
 
+section {
+  position: relative;
+}
+
 .my_servis {
   background-image: url("../img/servis-bg.png");
   height: auto;
   padding-bottom: 20px;
   margin-bottom: 30px;
-  margin-top: 40px;
-  background-position: center center;
-  background-repeat: no-repeat;
+  padding-top: 40px;
+  background-size: cover;
+  background-position: right top !important;
+  background-repeat: no-repeat !important;
   max-width: 100%;
 }
 
 @media only screen and (max-width: 559px) {
   .my_servis {
-    margin-top: 30px;
+    padding-top: 30px;
     background: #e3f8eb;
     background-image: none !important;
   }
@@ -29203,7 +29198,6 @@ header .header-item .header-contact .header-btn .btn {
 
 @media only screen and (max-width: 399px) {
   .my_servis {
-    margin-top: 30px;
     background: #e3f8eb;
     background-image: none !important;
   }
@@ -29388,6 +29382,7 @@ header .header-item .header-contact .header-btn .btn {
   height: auto;
   background-position: right top !important;
   background-repeat: no-repeat !important;
+  background-size: cover !important;
   max-width: 100%;
   padding-bottom: 30px;
   margin-bottom: 30px;
@@ -29973,25 +29968,16 @@ header .header-item .header-contact .header-btn .btn {
 
 .license-page {
   background: #e3f8eb;
-  height: 85vh;
-}
-
-@media only screen and (max-width: 1247px) {
-  .license-page {
-    height: 45vh;
-  }
 }
 
 @media only screen and (max-width: 559px) {
   .license-page {
-    height: 96vh;
     margin-top: 30px;
   }
 }
 
 @media only screen and (max-width: 399px) {
   .license-page {
-    height: 106vh;
     margin-top: 30px;
   }
 }
@@ -30273,7 +30259,7 @@ header .header-item .header-contact .header-btn .btn {
 }
 
 .contact-block_two {
-  background: #E3F8EB;
+  background: #e3f8eb;
   border-radius: 20px;
   padding: 40px;
   margin-top: 350px;
@@ -30310,7 +30296,7 @@ header .header-item .header-contact .header-btn .btn {
 .contact-block_two .title p::after {
   width: 80px;
   height: 4px;
-  background: #3CCD74;
+  background: #3ccd74;
   border-radius: 4px;
   content: "";
   display: block;
@@ -30332,8 +30318,8 @@ header .header-item .header-contact .header-btn .btn {
 }
 
 .contact-block_two .form-group input {
-  background: #FFFFFF;
-  border: 1px solid #C7F1D7;
+  background: #ffffff;
+  border: 1px solid #c7f1d7;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border-radius: 8px;
@@ -30346,7 +30332,7 @@ header .header-item .header-contact .header-btn .btn {
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 0.02em;
-  color: #C2C2C9;
+  color: #c2c2c9;
 }
 
 .contact-block_two .form-group input::-moz-placeholder {
@@ -30354,7 +30340,7 @@ header .header-item .header-contact .header-btn .btn {
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 0.02em;
-  color: #C2C2C9;
+  color: #c2c2c9;
 }
 
 .contact-block_two .form-group input:-ms-input-placeholder {
@@ -30362,7 +30348,7 @@ header .header-item .header-contact .header-btn .btn {
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 0.02em;
-  color: #C2C2C9;
+  color: #c2c2c9;
 }
 
 .contact-block_two .form-group input::-ms-input-placeholder {
@@ -30370,7 +30356,7 @@ header .header-item .header-contact .header-btn .btn {
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 0.02em;
-  color: #C2C2C9;
+  color: #c2c2c9;
 }
 
 .contact-block_two .form-group input::placeholder {
@@ -30378,12 +30364,12 @@ header .header-item .header-contact .header-btn .btn {
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 0.02em;
-  color: #C2C2C9;
+  color: #c2c2c9;
 }
 
 .contact-block_two .form-group .form-select {
-  background: #FFFFFF;
-  border: 1px solid #C7F1D7;
+  background: #ffffff;
+  border: 1px solid #c7f1d7;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border-radius: 8px;
@@ -30393,7 +30379,7 @@ header .header-item .header-contact .header-btn .btn {
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 0.02em;
-  color: #C2C2C9;
+  color: #c2c2c9;
   width: 100%;
 }
 
@@ -30402,16 +30388,16 @@ header .header-item .header-contact .header-btn .btn {
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 0.02em;
-  color: #C2C2C9;
+  color: #c2c2c9;
 }
 
 .contact-block_two .form-group .btn {
-  background: #58D488;
+  background: #58d488;
   border-radius: 8px;
   font-weight: 600;
   font-size: 16px;
   line-height: 18px;
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 19px 38.5px;
   width: 100%;
 }
@@ -30434,7 +30420,7 @@ header .header-item .header-contact .header-btn .btn {
   font-size: 12px;
   line-height: 18px;
   letter-spacing: 0.02em;
-  color: #7C7C87;
+  color: #7c7c87;
   margin-bottom: 0;
   margin-top: 10px;
 }
@@ -30566,7 +30552,7 @@ header .header-item .header-contact .header-btn .btn {
   height: 40px;
   left: 0px;
   top: 360px;
-  background: #3CCD74;
+  background: #3ccd74;
   border-radius: 0px 0px 8px 8px;
   padding-top: 7px;
 }
@@ -30610,7 +30596,9 @@ header .header-item .header-contact .header-btn .btn {
   }
 }
 
-.galery-two-page .swiper-container-horizontal > .swiper-pagination-bullets, .galery-two-page .swiper-pagination-custom, .galery-two-page .swiper-pagination-fraction {
+.galery-two-page .swiper-container-horizontal > .swiper-pagination-bullets,
+.galery-two-page .swiper-pagination-custom,
+.galery-two-page .swiper-pagination-fraction {
   bottom: 35px;
   left: 0;
   width: 100%;
@@ -30620,79 +30608,91 @@ header .header-item .header-contact .header-btn .btn {
   opacity: 1;
 }
 
-.galery-two-page .swiper-button-prev, .galery-two-page .swiper-container-rtl .swiper-button-next {
+.galery-two-page .swiper-button-prev,
+.galery-two-page .swiper-container-rtl .swiper-button-next {
   left: 0px;
   right: auto;
-  background: #58D488;
+  background: #58d488;
   width: 50px;
   height: 50px;
   border-radius: 50%;
 }
 
-.galery-two-page .swiper-button-prev:after, .galery-two-page .swiper-container-rtl .swiper-button-next:after {
-  content: 'prev';
+.galery-two-page .swiper-button-prev:after,
+.galery-two-page .swiper-container-rtl .swiper-button-next:after {
+  content: "prev";
   color: #fff;
   font-size: 24px;
 }
 
-.galery-two-page .swiper-button-next, .galery-two-page .swiper-container-rtl .swiper-button-prev {
+.galery-two-page .swiper-button-next,
+.galery-two-page .swiper-container-rtl .swiper-button-prev {
   right: 0px;
   left: auto;
-  background: #58D488;
+  background: #58d488;
   width: 50px;
   height: 50px;
   border-radius: 50%;
 }
 
-.galery-two-page .swiper-button-next:after, .galery-two-page .swiper-container-rtl .swiper-button-prev:after {
-  content: 'next';
+.galery-two-page .swiper-button-next:after,
+.galery-two-page .swiper-container-rtl .swiper-button-prev:after {
+  content: "next";
   color: #fff;
   font-size: 24px;
 }
 
-.galery-two-page .swiper-button-next, .galery-two-page .swiper-button-prev {
+.galery-two-page .swiper-button-next,
+.galery-two-page .swiper-button-prev {
   position: absolute;
   top: 40%;
 }
 
 @media only screen and (max-width: 399px) {
-  .galery-two-page .swiper-button-next, .galery-two-page .swiper-button-prev {
+  .galery-two-page .swiper-button-next,
+  .galery-two-page .swiper-button-prev {
     top: 38%;
   }
 }
 
 .all-license .swiper-container {
+  overflow-y: visible;
   width: 100%;
-  padding-top: 50px;
-  padding-bottom: 125px;
+  margin-bottom: 100px;
 }
 
-.all-license .swiper-slide {
-  background-position: center;
-  background-size: cover;
-  width: 300px;
-  height: 300px;
+.all-license .swiper-container .swiper-slide {
+  text-align: center;
 }
 
-.all-license .swiper-slide img {
-  display: block;
+.all-license .swiper-container .swiper-slide a {
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+}
+
+.all-license .swiper-container .swiper-slide a.active {
+  cursor: -webkit-zoom-out;
+  cursor: zoom-out;
+}
+
+.all-license .swiper-container .swiper-slide a.active img {
+  -o-object-fit: contain;
+  object-fit: contain;
   width: 100%;
+  height: 100vh;
+  background: #000;
 }
 
-.all-license .swiper-container-3d .swiper-slide-shadow-left {
-  background-image: unset;
-  background-image: unset;
+@media only screen and (max-width: 559px) {
+  .all-license .swiper-container .swiper-slide a.active img {
+    padding-top: 72px;
+  }
 }
 
-.all-license .swiper-container-3d .swiper-slide-shadow-right {
-  background-image: unset;
-  background-image: unset;
-}
-
-.all-license .swiper-container-horizontal > .swiper-pagination-bullets, .all-license .swiper-pagination-custom, .all-license .swiper-pagination-fraction {
-  bottom: -20px;
-  left: 0;
-  width: 100%;
+.all-license .swiper-container .swiper-slide img {
+  height: 70vh;
+  max-width: 100%;
+  max-height: 100vh;
 }
 
 .our-galery_confer {
@@ -30749,7 +30749,7 @@ header .header-item .header-contact .header-btn .btn {
   height: 40px;
   left: 0px;
   top: 360px;
-  background: #3CCD74;
+  background: #3ccd74;
   border-radius: 0px 0px 8px 8px;
   padding-top: 7px;
 }
@@ -30770,7 +30770,9 @@ header .header-item .header-contact .header-btn .btn {
   margin-bottom: 0;
 }
 
-.our-galery_confer .swiper-container-horizontal > .swiper-pagination-bullets, .our-galery_confer .swiper-pagination-custom, .our-galery_confer .swiper-pagination-fraction {
+.our-galery_confer .swiper-container-horizontal > .swiper-pagination-bullets,
+.our-galery_confer .swiper-pagination-custom,
+.our-galery_confer .swiper-pagination-fraction {
   bottom: 35px;
   left: 0;
   width: 100%;
@@ -30780,43 +30782,49 @@ header .header-item .header-contact .header-btn .btn {
   opacity: 1;
 }
 
-.our-galery_confer .swiper-button-prev, .our-galery_confer .swiper-container-rtl .swiper-button-next {
+.our-galery_confer .swiper-button-prev,
+.our-galery_confer .swiper-container-rtl .swiper-button-next {
   left: 0px;
   right: auto;
-  background: #58D488;
+  background: #58d488;
   width: 50px;
   height: 50px;
   border-radius: 50%;
 }
 
-.our-galery_confer .swiper-button-prev:after, .our-galery_confer .swiper-container-rtl .swiper-button-next:after {
-  content: 'prev';
+.our-galery_confer .swiper-button-prev:after,
+.our-galery_confer .swiper-container-rtl .swiper-button-next:after {
+  content: "prev";
   color: #fff;
   font-size: 24px;
 }
 
-.our-galery_confer .swiper-button-next, .our-galery_confer .swiper-container-rtl .swiper-button-prev {
+.our-galery_confer .swiper-button-next,
+.our-galery_confer .swiper-container-rtl .swiper-button-prev {
   right: 0px;
   left: auto;
-  background: #58D488;
+  background: #58d488;
   width: 50px;
   height: 50px;
   border-radius: 50%;
 }
 
-.our-galery_confer .swiper-button-next:after, .our-galery_confer .swiper-container-rtl .swiper-button-prev:after {
-  content: 'next';
+.our-galery_confer .swiper-button-next:after,
+.our-galery_confer .swiper-container-rtl .swiper-button-prev:after {
+  content: "next";
   color: #fff;
   font-size: 24px;
 }
 
-.our-galery_confer .swiper-button-next, .our-galery_confer .swiper-button-prev {
+.our-galery_confer .swiper-button-next,
+.our-galery_confer .swiper-button-prev {
   position: absolute;
   top: 45%;
 }
 
 @media only screen and (max-width: 399px) {
-  .our-galery_confer .swiper-button-next, .our-galery_confer .swiper-button-prev {
+  .our-galery_confer .swiper-button-next,
+  .our-galery_confer .swiper-button-prev {
     top: 38%;
   }
 }
@@ -31016,6 +31024,11 @@ body {
   line-height: 1.5;
   color: #000;
   scroll-behavior: smooth;
+}
+
+body.active {
+  height: 100vh;
+  overflow: hidden;
 }
 
 ::-webkit-scrollbar {

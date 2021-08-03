@@ -8,6 +8,12 @@ body {
     line-height: 1.5;
     color: #000;
     scroll-behavior: smooth;
+
+    &.active
+    {
+      height: 100vh;
+      overflow: hidden;
+    }
   }
 
 

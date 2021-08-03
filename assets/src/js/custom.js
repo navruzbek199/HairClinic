@@ -100,9 +100,6 @@
 // });
 
 
-
-
-
 function animateNumber(callback, from, to, duration) {
     let start = null,
       animate = timestamp => {
@@ -372,19 +369,14 @@ var swiper = new Swiper(".mySwiper5", {
 
 
 var swiper = new Swiper(".mySwiper6", {
-  effect: "coverflow",
-  grabCursor: true,
   slidesPerView: 1,
   centeredSlides: 1,
-  slidesPerView: "auto",
-  coverflowEffect: {
-    rotate: 50,
-    stretch: 0,
-    depth: 100,
-    modifier: 1,
-    slideShadows: true,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-  },
+  centeredSlides: true,
+});
+
+$('.mySwiper6 a').on('click', function() {
+  $(this).toggleClass('active');
+  setTimeout(() => {
+    $('body').toggleClass('active');
+  }, 300);
 });
