@@ -29382,7 +29382,7 @@ section {
   height: auto;
   background-position: right top !important;
   background-repeat: no-repeat !important;
-  background-size: cover !important;
+  background-size: 50% !important;
   max-width: 100%;
   padding-bottom: 30px;
   margin-bottom: 30px;
@@ -29722,7 +29722,7 @@ section {
 
 .servies-two {
   background-position: right center !important;
-  background-size: cover !important;
+  background-size: 50% !important;
   background-repeat: no-repeat !important;
   max-width: 100%;
   padding-bottom: 100px;
