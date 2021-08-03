@@ -29624,19 +29624,6 @@ section {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-left: 100px;
-}
-
-@media only screen and (max-width: 1247px) {
-  .clinic-equipment .box-slider .swiper-slide {
-    margin-left: 165px;
-  }
-}
-
-@media only screen and (max-width: 559px) {
-  .clinic-equipment .box-slider .swiper-slide {
-    margin-left: 0px;
-  }
 }
 
 .clinic-equipment .box-slider .swiper-slide img {
@@ -29708,13 +29695,28 @@ section {
   background: #e3f8eb;
   z-index: 99;
   top: 150px;
-  opacity: 0;
+  opacity: 1;
+}
+
+.clinic-equipment .box-slider .swiper-button-next::after,
+.clinic-equipment .box-slider .swiper-container-rtl .swiper-button-prev::after {
+  opacity: 1;
 }
 
 @media only screen and (max-width: 559px) {
   .clinic-equipment .box-slider .swiper-button-next,
   .clinic-equipment .box-slider .swiper-container-rtl .swiper-button-prev {
-    opacity: 1;
+    margin-right: 15px;
+  }
+}
+
+.clinic-equipment .box-slider .swiper-button-prev {
+  right: auto;
+}
+
+@media only screen and (max-width: 559px) {
+  .clinic-equipment .box-slider .swiper-button-prev {
+    left: 15px;
   }
 }
 

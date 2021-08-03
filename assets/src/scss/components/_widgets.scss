@@ -378,13 +378,6 @@ section {
       -ms-flex-align: center;
       -webkit-align-items: center;
       align-items: center;
-      margin-left: 100px;
-      @include mq("desktop", max) {
-        margin-left: 165px;
-      }
-      @include mq("phablet", max) {
-        margin-left: 0px;
-      }
     }
 
     .swiper-slide img {
@@ -447,9 +440,24 @@ section {
       background: #e3f8eb;
       z-index: 99;
       top: 150px;
-      opacity: 0;
-      @include mq("phablet", max) {
+      opacity: 1;
+
+      &::after
+      {
         opacity: 1;
+      }
+
+      @include mq('phablet', max)
+      {
+        margin-right: 15px;
+      }
+    }
+    .swiper-button-prev
+    {
+      right: auto;
+      @include mq('phablet', max)
+      {
+        left: 15px;
       }
     }
   }
