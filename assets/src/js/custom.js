@@ -288,10 +288,8 @@ $('#closeBtn').click(function() {
 
 var swiper = new Swiper(".mySwiper2", {
   slidesPerView: 2,
-  spaceBetween: 30,
-  slidesPerGroup: 3,
+  spaceBetween: 20,
   loop: true,
-  loopFillGroupWithBlank: true,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -303,23 +301,12 @@ var swiper = new Swiper(".mySwiper2", {
   breakpoints: {
     320: {
       slidesPerView: 1,
-      spaceBetween: 50,
-    },
-    375: {
-      slidesPerView: 1,
-      spaceBetween: 50,
-    },
-    640: {
-      slidesPerView: 1,
-      spaceBetween: 50,
     },
     768: {
       slidesPerView: 1,
-      spaceBetween: 50,
     },
     1024: {
       slidesPerView: 2,
-      spaceBetween: 10,
     },
   }
 });

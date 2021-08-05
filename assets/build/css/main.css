@@ -29552,6 +29552,7 @@ section {
   box-shadow: 0px 12px 14px rgba(0, 0, 0, 0.107762);
   border-radius: 8px;
   width: 100%;
+  height: 100%;
 }
 
 .confiration .confiration-box .empty-img img {
@@ -29597,7 +29598,7 @@ section {
 }
 
 .clinic-equipment .box-slider {
-  padding-left: 150px;
+  padding-left: 10px;
 }
 
 @media only screen and (max-width: 559px) {
